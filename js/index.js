@@ -37,6 +37,8 @@ const siteContent = {
   },
 };
 
+// TASK 1 & 2: CREATE SELECTORS & UPDATE HTML WITH JSON DATA
+
 // Update the img src for the logo
 const logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
@@ -88,3 +90,26 @@ for (let i = 0; i < contactP.length; i++) {
 // Update footer
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
+
+// TASK 3: ADD NEW CONTENT
+
+// Append and prepend an item to navigation
+const nav = document.querySelector('nav');
+
+const appendA = document.createElement('a');
+nav.appendChild(appendA);
+appendA.textContent = "Append";
+appendA.setAttribute('href', '#');
+appendA.style.color = 'green';
+
+const prependA = document.createElement('a');
+nav.prepend(prependA);
+prependA.textContent = "Prepend";
+prependA.setAttribute('href', '#');
+prependA.style.color = 'green';
+
+
+// Change navigation text to green
+for (i = 0; i < navElement.length; i++) {
+  navElement[i].style.color = 'green';
+}
